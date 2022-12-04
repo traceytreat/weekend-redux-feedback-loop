@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function Understanding(){
     const dispatch = useDispatch();
@@ -27,8 +28,8 @@ function Understanding(){
     return (
         <section className='feedback-form'>
             <h2>How well are you understanding the content?</h2>
-            <button onClick={() => history.push('/')}>BACK</button>
             <form onSubmit={handleSubmit}>
+                <Button variant="outlined" onClick={() => history.push('/')}>BACK</Button>
                 <input 
                     type="number"
                     placeholder="Number from 1-5"
@@ -37,7 +38,7 @@ function Understanding(){
                     value={newUnderstanding}
                     onChange={(event) => setNewUnderstanding(event.target.value)} 
                 />
-                <button type="submit">NEXT</button>
+                <Button variant="contained" type="submit">NEXT</Button>
             </form>    
             
         </section>

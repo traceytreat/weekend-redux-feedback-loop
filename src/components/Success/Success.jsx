@@ -1,8 +1,9 @@
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function Success(){
     const history = useHistory();
-    
+
     const handleClick = () => {
 
         // Navigate to beginning of form
@@ -12,7 +13,7 @@ function Success(){
     return (
         <>
             <h2>Thank You!</h2>
-            <button onClick={handleClick}>Leave New Feedback</button>
+            <Button variant="contained" onClick={handleClick}>Leave New Feedback</Button>
         </>
     );
 }

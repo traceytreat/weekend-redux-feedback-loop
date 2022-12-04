@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 function Review(){
     // A review of all data that was submitted
@@ -38,8 +39,8 @@ function Review(){
             <p>Understanding: {feedbackStore.understanding}</p>
             <p>Support: {feedbackStore.support}</p>
             <p>Comments: {feedbackStore.comments}</p>
-            <button onClick={() => history.push('/comments')}>BACK</button>
-            <button onClick={handleSubmit}>SUBMIT</button>
+            <Button variant="outlined" onClick={() => history.push('/comments')}>BACK</Button>
+            <Button variant="contained" color="success" onClick={handleSubmit}>SUBMIT</Button>
             
         </>
     );

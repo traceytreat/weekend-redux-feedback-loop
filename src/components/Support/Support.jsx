@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function Support(){
     const dispatch = useDispatch();
@@ -29,8 +30,8 @@ function Support(){
     return (
         <section className='feedback-form'>
             <h2>How well are you being supported?</h2>
-            <button onClick={() => history.push('/understanding')}>BACK</button>
             <form onSubmit={handleSubmit}>
+                <Button variant="outlined" onClick={() => history.push('/understanding')}>BACK</Button>
                 <input 
                     type="number"
                     placeholder="Number from 1-5"
@@ -39,7 +40,7 @@ function Support(){
                     value={newSupport}
                     onChange={(event) => setNewSupport(event.target.value)} 
                 />
-                <button type="submit">NEXT</button>
+                <Button variant="contained" type="submit">NEXT</Button>
             </form> 
             
         </section>

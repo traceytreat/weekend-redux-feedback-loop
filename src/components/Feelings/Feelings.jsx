@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function Feelings(){
     const dispatch = useDispatch();
@@ -35,7 +36,7 @@ function Feelings(){
                     value={newFeeling}
                     onChange={(event) => setNewFeeling(event.target.value)} 
                 />
-                <button type="submit">NEXT</button>
+                <Button variant="contained" type="submit">NEXT</Button>
             </form>       
         </section>
     );
