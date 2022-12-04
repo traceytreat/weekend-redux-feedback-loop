@@ -23,6 +23,9 @@ const feedback = (state = feedbackState, action) => {
     if (action.type === 'SET_COMMENT'){
         return {...state, comments: action.payload}
     }
+    if (action.type === 'CLEAR'){
+        return {}
+    }
     return state;
 }
 

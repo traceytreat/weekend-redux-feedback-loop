@@ -1,10 +1,18 @@
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 
 function Success(){
     const history = useHistory();
-
+    const dispatch = useDispatch();
+    
     const handleClick = () => {
+
+        // clear previous form
+        dispatch({
+            type: 'CLEAR',
+
+        });
 
         // Navigate to beginning of form
         history.push('/');
