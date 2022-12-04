@@ -25,8 +25,9 @@ function Understanding(){
 
     // Form for adding understanding from 1-10
     return (
-        <>
+        <section className='feedback-form'>
             <h2>How well are you understanding the content?</h2>
+            <button onClick={() => history.push('/')}>BACK</button>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="number"
@@ -39,7 +40,7 @@ function Understanding(){
                 <button type="submit">NEXT</button>
             </form>    
             
-        </>
+        </section>
     );
 }
 

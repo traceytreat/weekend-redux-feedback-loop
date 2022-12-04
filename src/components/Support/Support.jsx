@@ -27,8 +27,9 @@ function Support(){
 
     // Form for adding support level from 1-10
     return (
-        <>
+        <section className='feedback-form'>
             <h2>How well are you being supported?</h2>
+            <button onClick={() => history.push('/understanding')}>BACK</button>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="number"
@@ -41,7 +42,7 @@ function Support(){
                 <button type="submit">NEXT</button>
             </form> 
             
-        </>
+        </section>
     );
 }
 

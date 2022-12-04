@@ -24,7 +24,7 @@ function Feelings(){
 
     // Form for adding feelings from 1/10
     return (
-        <>
+        <section className='feedback-form'>
             <h2>How are you feeling today?</h2>
             <form onSubmit={handleSubmit}>
                 <input 
@@ -37,7 +37,7 @@ function Feelings(){
                 />
                 <button type="submit">NEXT</button>
             </form>       
-        </>
+        </section>
     );
 
 }

@@ -22,8 +22,9 @@ function Comments (){
     }
     // Form for adding comments
     return (
-        <>
+        <section className='feedback-form'>
             <h2>Any comments you want to leave?</h2>
+            <button onClick={() => history.push('/support')}>BACK</button>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
@@ -33,7 +34,7 @@ function Comments (){
                 />
                 <button type="submit">NEXT</button>
             </form>
-        </>
+        </section>
     );
 }
 

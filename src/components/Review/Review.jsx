@@ -38,6 +38,7 @@ function Review(){
             <p>Understanding: {feedbackStore.understanding}</p>
             <p>Support: {feedbackStore.support}</p>
             <p>Comments: {feedbackStore.comments}</p>
+            <button onClick={() => history.push('/comments')}>BACK</button>
             <button onClick={handleSubmit}>SUBMIT</button>
             
         </>
