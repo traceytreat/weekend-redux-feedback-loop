@@ -10,14 +10,17 @@ function Understanding(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('understanding');
-        dispatch({
-            type: 'SET_UNDERSTANDING',
-            payload: Number(newUnderstanding)
-        });
-
-        // Navigate to support
-        history.push('/support');
+        if (newUnderstanding !== ''){
+            dispatch({
+                type: 'SET_UNDERSTANDING',
+                payload: Number(newUnderstanding)
+            });
+    
+            // Navigate to support
+            history.push('/support');
+        } else {
+            alert('Please fill out the input correctly');
+        }
     }
 
     // Form for adding understanding from 1-10

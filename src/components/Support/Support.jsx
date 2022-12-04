@@ -11,13 +11,18 @@ function Support(){
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        dispatch({
-            type: 'SET_SUPPORT',
-            payload: Number(newSupport)
-        });
+        if (newSupport !== ''){
+            dispatch({
+                type: 'SET_SUPPORT',
+                payload: Number(newSupport)
+            });
+    
+            // Navigate to comments
+            history.push('/comments');
+        } else {
+            alert('Please fill out the input correctly');
+        }
 
-        // Navigate to comments
-        history.push('/comments');
     }
 
     // Form for adding support level from 1-10

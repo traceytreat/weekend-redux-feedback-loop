@@ -10,14 +10,16 @@ function Feelings(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        dispatch({
-            type: 'SET_FEELING',
-            payload: Number(newFeeling)
-        });
-
-        // Navigate to understanding
-        history.push('/understanding');
+        if (newFeeling !== ''){
+            dispatch({
+                type: 'SET_FEELING',
+                payload: Number(newFeeling)
+            });
+            // Navigate to understanding
+            history.push('/understanding');
+        } else {
+            alert('Please fill out the input correctly');
+        }
     }
 
     // Form for adding feelings from 1/10
