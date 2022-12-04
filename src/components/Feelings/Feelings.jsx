@@ -13,7 +13,7 @@ function Feelings(){
 
         dispatch({
             type: 'SET_FEELING',
-            payload: newFeeling
+            payload: Number(newFeeling)
         });
 
         // Navigate to understanding

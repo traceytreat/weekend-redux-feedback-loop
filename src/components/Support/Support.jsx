@@ -13,7 +13,7 @@ function Support(){
 
         dispatch({
             type: 'SET_SUPPORT',
-            payload: newSupport
+            payload: Number(newSupport)
         });
 
         // Navigate to comments

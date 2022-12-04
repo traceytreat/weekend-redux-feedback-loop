@@ -10,10 +10,10 @@ function Understanding(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
+        console.log('understanding');
         dispatch({
             type: 'SET_UNDERSTANDING',
-            payload: newUnderstanding
+            payload: Number(newUnderstanding)
         });
 
         // Navigate to support
